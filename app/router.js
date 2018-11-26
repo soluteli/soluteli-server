@@ -6,6 +6,9 @@ module.exports = app => {
   const { router, controller } = app
   router.get('/', controller.home.index)
 
+  // article
+  router.resources('article', '/api/article', controller.article)
+
   // role
   // router.post('/api/role', controller.role.create)
   // router.delete('/api/role/:id', controller.role.destroy)

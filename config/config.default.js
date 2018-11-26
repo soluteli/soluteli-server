@@ -17,7 +17,7 @@ module.exports = appInfo => {
     csrf: {
       enable: false,
     },
-    domainWhiteList: [ 'http://localhost:8000' ],
+    domainWhiteList: [ 'http://localhost:9001' ],
   }
 
   config.multipart = {
@@ -29,7 +29,7 @@ module.exports = appInfo => {
   }
 
   config.mongoose = {
-    url: 'mongodb://127.0.0.1:27017/egg_x',
+    url: 'mongodb://127.0.0.1:27017/blog', // url/${databasename}
     options: {
       useMongoClient: true,
       autoReconnect: true,
