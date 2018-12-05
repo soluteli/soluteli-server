@@ -1,0 +1,281 @@
+{
+	"info": {
+		"_postman_id": "d4bc256e-2ddb-4d7a-9116-0305f789a138",
+		"name": "blog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "article update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"我的文章 第一篇\",\n\t\"author\": \"soluteli\",\n\t\"content\": \"我是一只小小鸟1\",\n\t\"tags\": [],\n\t\"comments\": [],\n\t\"category\": []\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:7001/api/article/5c07d364528faf3a4c35f7d5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"article",
+						"5c07d364528faf3a4c35f7d5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "article get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:7001/api/article/5c07d364528faf3a4c35f7d5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"article",
+						"5c07d364528faf3a4c35f7d5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "article create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"我的文章 第一篇\",\n\t\"author\": \"soluteli\",\n\t\"content\": \"我是一只小小鸟\",\n\t\"tags\": [],\n\t\"comments\": [],\n\t\"category\": []\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:7001/api/article",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"article"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tag create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"前端\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:7001/api/tag",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"tag"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "article delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"我的文章 第一篇\",\n\t\"author\": \"soluteli\",\n\t\"content\": \"我是一只小小鸟\",\n\t\"tags\": [],\n\t\"comments\": [],\n\t\"category\": []\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:7001/api/article/5c07d364528faf3a4c35f7d5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"article",
+						"5c07d364528faf3a4c35f7d5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tag update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"前端1\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:7001/api/tag",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"tag"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tag delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"前端1\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:7001/api/tag/5c07e19e55edc4117cbac939",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"tag",
+						"5c07e19e55edc4117cbac939"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "tag get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"前端1\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:7001/api/tag",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "7001",
+					"path": [
+						"api",
+						"tag"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
