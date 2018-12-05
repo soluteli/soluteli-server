@@ -1,6 +1,6 @@
 const Service = require('egg').Service
 
-class UserService extends Service {
+class ArticleService extends Service {
   // create======================================================================================================>
   async create() {
     const { ctx, service } = this
@@ -11,9 +11,9 @@ class UserService extends Service {
   // destroy======================================================================================================>  
   async destroy(_id) {
     const { ctx, service } = this
-    const user = await ctx.service.user.find(_id)
-    if (!user) {
-      ctx.throw(404, 'user not found')
+    const article = await ctx.service.article.find(_id)
+    if (!article) {
+      ctx.throw(404, 'article not found')
     }
     return ctx.model.Article.findByIdAndRemove(_id)
   }
@@ -21,18 +21,18 @@ class UserService extends Service {
   // update======================================================================================================>
   async update(_id, payload) {
     const { ctx, service } = this
-    const user = await ctx.service.user.find(_id)
-    if (!user) {
-      ctx.throw(404, 'user not found')
+    const article = await ctx.service.article.find(_id)
+    if (!article) {
+      ctx.throw(404, 'article not found')
     }
     return ctx.model.Article.findByIdAndUpdate(_id, payload)
   }
 
   // show======================================================================================================>
   async show(_id) {
-    const user = await this.ctx.service.article.find(_id)
-    if (!user) {
-      this.ctx.throw(404, 'user not found')
+    const article = await this.ctx.service.article.find(_id)
+    if (!article) {
+      this.ctx.throw(404, 'article not found')
     }
     return this.ctx.model.Article.findById(_id).populate('role')
   }
@@ -61,4 +61,4 @@ class UserService extends Service {
 }
 
 
-module.exports = UserService
+module.exports = ArticleService

@@ -32,12 +32,12 @@ module.exports = app => {
     origin: { type: Number, default: 0 },
   
     // 文章标签
-    // tags: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Tag', required: true }],
+    tags: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Tag', required: true }],
   
-    // comments: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Comment', required: true }],
+    comments: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Comment', required: true }],
   
     // 文章分类
-    // category: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Category', required: true }],
+    category: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Category', required: true }],
   
     // 点赞的用户
     /* like_users: [

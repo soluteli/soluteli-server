@@ -11,12 +11,12 @@ POST   | /posts          | posts          | app.controller.posts.create
 PATCH  | /posts/:id      | post           | app.controller.posts.update
 DELETE | /posts/:id      | post           | app.controller.posts.destroy
 
+- [restful-风格的-url-定义](https://eggjs.org/zh-cn/basics/router.html#restful-风格的-url-定义)
+
 **Finish**
-- POST `/api/article`
-- GET `/api/article`
-- GET `/api/article/:id`
+- article CRUD (*181205*)
 
 **TODO**
 - [ ] egg 测试
 - [ ] egg debug分析
-- [ ] mongodb: objectID、id、_id、id 自增
+- [ ] ~~mongodb: objectID、id、_id、id 自增~~

@@ -5,7 +5,7 @@ class ArticleController extends Controller {
     super(ctx)
   }
 
-  // 创建用户
+  // 创建文章
   async create() {
     const { ctx, service } = this
     // 校验参数
@@ -18,32 +18,32 @@ class ArticleController extends Controller {
     ctx.helper.success({ctx, res})
   }
 
-  // 删除单个用户
+  // 删除单篇文章
   async destroy() {
     const { ctx, service } = this
     // 校验参数
     const { id } = ctx.params
     // 调用 Service 进行业务处理
-    await service.user.destroy(id)
+    await service.article.destroy(id)
     // 设置响应内容和响应状态码
     ctx.helper.success({ctx})
   }
 
-  // 修改用户
+  // 修改文章
   async update() {
     const { ctx, service } = this
     // 校验参数
-    ctx.validate(this.UserUpdateTransfer)
+    // ctx.validate(this.UserUpdateTransfer)
     // 组装参数
     const { id } = ctx.params
     const payload = ctx.request.body || {}
     // 调用 Service 进行业务处理
-    await service.user.update(id, payload)
+    await service.article.update(id, payload)
     // 设置响应内容和响应状态码
     ctx.helper.success({ctx})
   }
  
-  // 获取单个用户
+  // 获取单篇文章
   async show() {
     const { ctx, service } = this
     // 组装参数
@@ -54,7 +54,7 @@ class ArticleController extends Controller {
     ctx.helper.success({ctx, res})
   }
 
-  // 获取所有用户(分页/模糊)
+  // 获取所有文章(分页/模糊)
   async index() {
     const { ctx, service } = this
     // 组装参数
@@ -65,7 +65,7 @@ class ArticleController extends Controller {
     ctx.helper.success({ctx, res})
   }
 
-  // 删除所选用户(条件id[])
+  // 删除所选文章(条件id[])
   async removes() {
     const { ctx, service } = this
     // 组装参数
