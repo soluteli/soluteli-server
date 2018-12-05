@@ -9,6 +9,9 @@ module.exports = app => {
   // article
   router.resources('article', '/api/article', controller.article)
 
+  // tag
+  router.resources('tag', '/api/tag', controller.tag)
+
   // role
   // router.post('/api/role', controller.role.create)
   // router.delete('/api/role/:id', controller.role.destroy)
