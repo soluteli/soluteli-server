@@ -12,20 +12,23 @@ module.exports = app => {
   // tag
   router.resources('tag', '/api/tag', controller.tag)
 
+  // category
+  router.resources('category', '/api/category', controller.category)
+
   // role
   // router.post('/api/role', controller.role.create)
   // router.delete('/api/role/:id', controller.role.destroy)
   // router.put('/api/role/:id', controller.role.update)
   // router.get('/api/role/:id', controller.role.show)
   // router.get('/api/role', controller.role.index)
-  router.delete('/api/role', controller.role.removes)
-  router.resources('role', '/api/role', controller.role)
+  // router.delete('/api/role', controller.role.removes)
+  // router.resources('role', '/api/role', controller.role)
 
   // userAccess
-  router.post('/api/user/access/login', controller.userAccess.login)
-  router.get('/api/user/access/current', app.jwt, controller.userAccess.current)
-  router.get('/api/user/access/logout', controller.userAccess.logout)
-  router.put('/api/user/access/resetPsw', app.jwt, controller.userAccess.resetPsw)
+  // router.post('/api/user/access/login', controller.userAccess.login)
+  // router.get('/api/user/access/current', app.jwt, controller.userAccess.current)
+  // router.get('/api/user/access/logout', controller.userAccess.logout)
+  // router.put('/api/user/access/resetPsw', app.jwt, controller.userAccess.resetPsw)
 
   // user
   // router.post('/api/user', controller.user.create)
